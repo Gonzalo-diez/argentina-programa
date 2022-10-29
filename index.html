@@ -13,30 +13,33 @@
         <meta name="keywords" content="Portfolio, desarrollador, web dev">
         <meta name="author" content="Gonzalo Juan Diez">
     </head>
-    <body>
+    <body class="container-fluid">
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Gonzalo</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">Inicio</a>
-                    <a class="nav-item nav-link" href="#">Sobre mí</a>
-                    <a class="nav-item nav-link" href="#">Mis habilidades</a>
-                    <a class="nav-item nav-link" href="#">Mis proyectos</a>
-                    <a class="nav-item nav-link" href="#">Curriculum</a>
-                  </div>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Gonzalo</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+                  <a class="nav-link" href="#sobre">Sobre mí</a>
+                  <a class="nav-link" href="#habilidad">Mis habilidades</a>
+                  <a class="nav-link" href="#trabajo">Mis trabajos</a>
+                  <a class="nav-link" href="#contacto">Contacto</a>
+                  <a class="nav-link" href="#curriculum">Curriculum</a>
                 </div>
-              </nav>
+              </div>
+            </div>
+          </nav>
         </header>
 
-        <main>
-            <section>
+        <main class="mt-3">
+            <section id="inicio">
                 <div>
-                  <img src="./img/perfil-removebg-preview.png" class="rounded float-end">
-                  <h1>Hola, <br>Yo soy <span>Gonzalo</span></h1>
+                  <img src="./img/perfil-removebg-preview.png" class="rounded float-end w-15">
+                  <h1>Hola, <br>Yo soy <span class="text-info">Gonzalo</span></h1>
                   <p>Desarrollador Front End</p>
                 </div>
                 <div>
@@ -46,9 +49,19 @@
             </section>
         </main>
 
-        <section>
+        <section id="sobre" class="mt-3">
+          <h2 class="text-center text-primary">Sobre Mí</h2>
           <div>
-            <h2 class="text-center">Mis habilidades</h2>
+            <div>
+              <h2>Yo soy Gonzalo</h2>
+              <p>Y soy un desarrollador web especializado en Front End, me gusta leer libros y el cine y practicar jiu jitsu.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="habilidad" class="mt-3">
+          <div>
+            <h2 class="text-center text-primary">Mis habilidades</h2>
           </div>
 
           <div>
@@ -88,9 +101,9 @@
           </div>
         </section>
 
-        <section>
+        <section id="trabajo" class="mt-3">
           <div>
-            <h2 class="text-center">Mis trabajos</h2>
+            <h2 class="text-center text-primary">Mis trabajos</h2>
           </div>
 
           <div class="card-group">
@@ -118,8 +131,8 @@
           </div>
         </section>
 
-        <section class="mb-12">
-          <h2 class="h1-responsive font-weight-bold text-center my-4">Contactame</h2>
+        <section id="contacto" class="mb-12">
+          <h2 class="text-center text-primary my-4">Contactame</h2>
           <p class="text-center w-responsive mx-auto mb-5">Si quiere comunicarse conmigo por favor hagalo dentro de esta sección.</p>
 
           <div class="row">
@@ -170,8 +183,8 @@
           </div>
         </section>
 
-        <section>
-          <h2 class="text-center">Curriculum</h2>
+        <section id="curriculum" class="mt-3">
+          <h2 class="text-center text-primary">Curriculum</h2>
 
           <div>
             <a download="cv" href="./curriculum/CV Gonzalo Diez (5).pdf">
@@ -180,7 +193,7 @@
           </div>
         </section>
 
-        <footer class="text-center text-lg-start bg-info text-muted">
+        <footer class="text-center text-lg-start bg-info text-muted mb-0">
           <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
             <div class="me-5 d-none d-lg-block">
               <span>Contactame a través de mis redes:</span>
