@@ -331,7 +331,11 @@ img {
 }
 
 .skills__sql {
-    width: 60%;
+  width: 65%;
+}
+
+.skills__wp {
+  width: 60%;
 }
 
 /*=== Trabajos ===*/
