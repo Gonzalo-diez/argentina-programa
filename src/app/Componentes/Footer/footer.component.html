@@ -1,8 +1,8 @@
 <!-- Sección del pie de página -->
-<footer class="footer">
-    <p class="footer__title">Gonzalo</p>
+<footer class="footer" *ngFor="let item of footer">
+    <p class="footer__title">{{item.footerNombre}}</p>
     <div class="footer__social">
-        <a href="https://www.linkedin.com/in/gonzalo-juan-diez-7188851a5/" class="footer__icon"><i class="bx bxl-linkedin" ></i></a>
-        <a href="https://www.instagram.com/gonzalodiezbuch/?hl=es-la" class="footer__icon"><i class="bx bxl-instagram" ></i></a>
+        <a [href]="item.footerLinkUrl" class="footer__icon"><i class="bx bxl-linkedin" ></i></a>
+        <a [href]="item.footerInstagramUrl" class="footer__icon"><i class="bx bxl-instagram" ></i></a>
     </div>
 </footer>

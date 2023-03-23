@@ -2,9 +2,9 @@
 <section class="curriculum section" id="curriculum">
     <h2 class="section-title">Curriculum Vitae</h2>
   
-    <div class="cv__container bd-grid">
-        <a download="cv" href="../../../assets/curriculum/CV Gonzalo Diez.pdf" class="cv__img">
-            <img src="../../../assets/img/CV Gonzalo Diez.png" alt="curriculum vitae">
+    <div class="cv__container bd-grid" *ngFor="let item of curriculum">
+        <a download="cv" href={{item.curriculumDescarga}} class="cv__img">
+            <img src={{item.curriculumImg}} alt="curriculum vitae">
         </a>
     </div>
 </section>

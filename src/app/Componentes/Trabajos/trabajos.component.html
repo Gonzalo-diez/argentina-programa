@@ -2,18 +2,10 @@
 <section class="work section" id="work">
     <h2 class="section-title">Trabajos</h2>
   
-    <div class="work__container bd-grid">
-        <a href="https://github.com/Gonzalo-diez/proyecto-app-libreria" class="work__img">
-            <img src="../../../assets/img/gifApp.gif" alt="App libreria">
-            <h3 class="work__title">App libreria</h3>
-        </a>
-        <a href="https://github.com/Gonzalo-diez/calculadora" class="work__img">
-            <img src="../../../assets/img/calculadora.gif" alt="Calculadora">
-            <h3 class="work__title">Calculadora JS</h3>
-        </a>
-        <a href="https://github.com/Gonzalo-diez/tateti" class="work__img">
-            <img src="../../../assets/img/tateti.gif" alt="Ta-te-ti">
-            <h3 class="work__title">Tateti JS</h3>
+    <div class="work__container bd-grid" *ngFor="let item of trabajos">
+        <a [href]="item.trabajoUrl" class="work__img">
+            <img [src]="item.trabajoImg" [alt]="item.trabajoTitulo">
+            <h3 class="work__title">{{item.trabajoTitulo}}</h3>
         </a>
     </div>
 </section>

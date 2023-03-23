@@ -5,29 +5,12 @@
     <p class="education__text">Mis titulos conseguidos en CoderHouse</p>
   
     <div class="education__container bd-grid">
-        <a href="https://www.coderhouse.com/certificados/6106aec6facf730011e677ce" class="education__img">
-            <img src="../../../assets/img/desarrollo.png" alt="Desarrollo web">
-            <h3 class="education__title">Desarrollo Web</h3>
-        </a>
-        <a href="https://www.coderhouse.com/certificados/61773d19a885610c34d1647c" class="education__img">
-            <img src="../../../assets/img/javascript.png" alt="JavaScript">
-            <h3 class="education__title">JavaScript</h3>
-        </a>
-        <a href="https://www.coderhouse.com/certificados/62292b3360e98300259b0365" class="education__img">
-            <img src="../../../assets/img/react.png" alt="React JS">
-            <h3 class="education__title">React</h3>
-        </a>
-        <a href="https://www.coderhouse.com/certificados/62c64893fc3fdb0019c2b0e2" class="education__img">
-            <img src="../../../assets/img/sql.png" alt="SQL">
-            <h3 class="education__title">SQL</h3>
-        </a>
-        <a href="https://www.coderhouse.com/certificados/62fdc63ff96010000410f814" class="education__img">
-            <img src="../../../assets/img/csharp.png" alt="C#">
-            <h3 class="education__title">C#</h3>
-        </a>
-        <a href="https://www.coderhouse.com/certificados/63a98a28e5503f000ecc4248" class="education__img">
-            <img src="../../../assets/img/wordpress.png" alt="WordPress">
-            <h3 class="education__title">WordPress</h3>
-        </a>
+        <div *ngFor="let item of educacion">
+          <a href="{{item.educacionUrl}}" class="education__img">
+            <img [src]="item.educacionImg" alt="{{item.educacionTitulo}}">
+            <h3 class="education__title">{{item.educacionTitulo}}</h3>
+          </a>
+        </div>
     </div>
+      
 </section>

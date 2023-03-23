@@ -2,91 +2,19 @@
 <section class="hard__skill section" id="skills">
     <h2 class="section-title">Habilidades duras</h2>
 
-    <div class="hard__container bd-grid">          
+    <div class="hard__container bd-grid" *ngFor="let item of habilidadesduras">          
         <div>
             <div class="hard__data">
-                <div class="hard__names">
-                    <i class='bx bxl-html5 hard__icon'></i>
-                    <span class="hard__name">HTML5</span>
-                </div>
-                <div class="hard__bar hard">
-  
-                </div>
-                <div>
-                    <span class="hard__percentage">100%</span>
-                </div>
-            </div>
-            <div class="hard__data">
-                <div class="hard__names">
-                    <i class='bx bxl-css3 hard__icon'></i>
-                    <span class="hard__name">CSS3</span>
-                </div>
-                <div class="hard__bar hard">
-                    
-                </div>
-                <div>
-                    <span class="hard__percentage">100%</span>
-                </div>
-            </div>
-            <div class="hard__data">
-                <div class="hard__names">
-                    <i class='bx bxl-javascript hard__icon' ></i>
-                    <span class="hard__name">JavaScript</span>
-                </div>
-                <div class="hard__bar hard">
-                    
-                </div>
-                <div>
-                    <span class="hard__percentage">100%</span>
-                </div>
-            </div>
-            <div class="hard__data">
-                <div class="hard__names">
-                    <i class='bx bxl-react hard__icon' ></i>
-                    <span class="hard__name">REACT</span>
-                </div>
-                <div class="hard__bar hard">
-                    
-                </div>
-                <div>
-                    <span class="hard__percentage">100%</span>
-                </div>
-            </div>
-            <div class="hard__data">
-              <div class="hard__names">
-                  <i class="bx bxs-data hard__icon"></i>
-                  <span class="hard__name">MySQL</span>
-              </div>
-              <div class="hard__bar hard">
-                  
-              </div>
-              <div>
-                  <span class="hard__percentage">100%</span>
-              </div>
-            </div>
-            <div class="hard__data">
-                <div class="hard__names">
-                    <i class="bx bxs-data hard__icon"></i>
-                    <span class="hard__name">C#</span>
-                </div>
-                <div class="hard__bar hard__csharp">
-                    
-                </div>
-                <div>
-                    <span class="hard__percentage">40%</span>
-                </div>
-            </div>
-            <div class="hard__data">
-                <div class="hard__names">
-                    <i class="bx bxl-wordpress hard__icon"></i>
-                    <span class="hard__name">WordPress</span>
-                </div>
-                <div class="hard__bar hard">
-                    
-                </div>
-                <div>
-                    <span class="hard__percentage">100%</span>
-                </div>
+                <circle-progress
+                [percent]="(item.porcentajeHD)"
+                [maxPercent]="100"
+                [title]="(item.habilidadDuraNombre)"
+                [subtitle]="'habilidad dura'"
+                [outerStrokeWidth]="20"
+                [innerStrokeWidth]="10"
+                [outerStrokeColor]="'#78C000'"
+                [innerStrokeColor]="'#C7E596'"
+                [animationDuration]="1000"></circle-progress>
             </div>
         </div>
     </div>

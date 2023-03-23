@@ -164,10 +164,6 @@ img {
   background-color: var(--first-color);
 }
 
-.nav__logo {
-  color: var(--second-color);
-}
-
 .nav__toggle {
   color: var(--second-color);
   font-size: 1.5rem;
@@ -288,104 +284,31 @@ img {
 /*=== Habilidades blandas ===*/
 .soft__container {
   row-gap: 2rem;
+  display: flex;
+  justify-content: space-around;
 }
 
 .soft__data {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   position: relative;
   font-weight: var(--font-semi);
-  padding: .5rem 1rem;
   margin-bottom: var(--mb-4);
-  border-radius: .5rem;
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
-}
-
-.soft__icon {
-  font-size: 2rem;
-  margin-right: var(--mb-2);
-  color: var(--first-color);
-}
-
-.soft__names {
-  display: flex;
-  align-items: center;
-}
-
-.soft__bar {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-color: var(--first-color);
-  height: .25rem;
-  border-radius: .5rem;
-  z-index: var(--z-back);
-}
-
-.soft__team {
-  width: 80%;
-}
-
-.soft__creativity {
-  width: 75%;
-}
-
-.soft__solving {
-  width: 80%;
-}
-
-.soft__leader {
-  width: 75%;
 }
 
 /*=== Habilidades duras ===*/
 
 .hard__container {
   row-gap: 2rem;
+  display: flex;
+  justify-content: space-around;
 }
 
 .hard__data {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   position: relative;
   font-weight: var(--font-semi);
-  padding: .5rem 1rem;
   margin-bottom: var(--mb-4);
-  border-radius: .5rem;
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
 }
-
-.hard__icon {
-  font-size: 2rem;
-  margin-right: var(--mb-2);
-  color: var(--first-color);
-}
-
-.hard__names {
-  display: flex;
-  align-items: center;
-}
-
-.hard__bar {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-color: var(--first-color);
-  height: .25rem;
-  border-radius: .5rem;
-  z-index: var(--z-back);
-}
-
-.hard {
-  width: 100%;
-}
-
-.hard__csharp {
-  width: 40%;
-}
-
 
 /*=== Educación ===*/
 .education__container {
@@ -409,10 +332,8 @@ img {
   color: black;
 }
 
-.education__img {
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
-  border-radius: .5rem;
-  overflow: hidden;
+#education > div > div > a > img {
+  width: 100%;
 }
 
 /*=== Trabajos ===*/
@@ -438,6 +359,7 @@ img {
 
 .work__img img {
   transition: 1s;
+  width: 100%;
 }
 
 .work__img img:hover {
@@ -510,31 +432,12 @@ img {
 
 /*=== Login footer ===*/
 .login-footer {
-  margin-top: 38%;
+  margin-bottom: -200px;
   background-color: var(--second-color);
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
-}
-
-.footer__title {
-  font-size: 2rem;
-  margin-bottom: var(--mb-4);
-}
-
-.footer__social {
-  margin-bottom: var(--mb-4);
-}
-
-.footer__icon {
-  font-size: 1.5rem;
-  color: #fff;
-  margin: 0 var(--mb-2);
-}
-
-.footer__copy {
-  font-size: var(--smaller-font-size);
 }
 
 /*=== MEDIA QUERIES ===*/
