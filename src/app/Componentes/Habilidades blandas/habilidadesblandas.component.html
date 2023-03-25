@@ -2,9 +2,8 @@
 <section class="soft__skills section" id="skills">
     <h2 class="section-title">Habilidades blandas</h2>
   
-    <div class="soft__container bd-grid" *ngFor="let item of habilidadesblandas">          
-        <div>
-            <div class="soft__data">
+    <div class="soft__container bd-grid">          
+            <div class="soft__data" *ngFor="let item of habilidadesblandas">
                 <circle-progress
                 [percent]="(item.porcentajeHB)"
                 [maxPercent]="100"
@@ -17,7 +16,6 @@
                 [animationDuration]="1000">
                 </circle-progress>
             </div>
-        </div>
     </div>
 
 </section>

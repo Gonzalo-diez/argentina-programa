@@ -2,10 +2,12 @@
 <section class="work section" id="work">
     <h2 class="section-title">Trabajos</h2>
   
-    <div class="work__container bd-grid" *ngFor="let item of trabajos">
-        <a [href]="item.trabajoUrl" class="work__img">
+    <div class="work__container bd-grid">
+        <div class="work__data" *ngFor="let item of trabajos">
+            <a [href]="item.trabajoUrl" class="work__img">
             <img [src]="item.trabajoImg" [alt]="item.trabajoTitulo">
             <h3 class="work__title">{{item.trabajoTitulo}}</h3>
-        </a>
+            </a>
+        </div>
     </div>
 </section>
