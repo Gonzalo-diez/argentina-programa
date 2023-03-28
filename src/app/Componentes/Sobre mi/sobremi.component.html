@@ -1,11 +1,11 @@
 <!-- Sección de intereses -->
-<section class="about section " id="about">
+<section class="about section " id="about" *ngFor="let item of sobremi">
     <h2 class="section-title">Sobre mí</h2>
   
     <div class="about__container bd-grid"> 
         <div>
-            <h2 class="about__subtitle">Yo soy {{sobremi.sobreTitulo}}</h2>
-            <p class="about__text">{{sobremi.sobreTexto}}</p>           
+            <h2 class="about__subtitle">Yo soy {{item.sobreTitulo}}</h2>
+            <p class="about__text">{{item.sobreTexto}}</p>           
         </div>                                   
     </div>
 </section>

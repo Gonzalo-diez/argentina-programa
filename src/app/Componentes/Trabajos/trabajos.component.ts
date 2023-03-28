@@ -9,8 +9,20 @@ import { TrabajosService } from 'src/app/Service/trabajos.service';
 })
 export class TrabajosComponent implements OnInit {
     trabajos: trabajos[] = [];
+
     constructor(public trabajosService: TrabajosService) { }
+
     ngOnInit(): void {
+       this.cargarTrabajos(); 
+    }
+
+    cargarTrabajos() {
         this.trabajosService.traer().subscribe(data => {this.trabajos = data});
+    }
+
+    borrarTrabajos(id?: number) {
+        if(id != undefined) {
+            this.trabajosService.borrar(id).subscribe(data => {this.cargarTrabajos()}, err => {alert("No se puede borrar este trabajo")})
+        }
     }
 }

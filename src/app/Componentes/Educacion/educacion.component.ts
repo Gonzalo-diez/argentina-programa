@@ -13,6 +13,16 @@ export class EducacionComponent implements OnInit {
     constructor(public EducacionService: EducacionService) { }
 
     ngOnInit(): void {
+        this.cargarEducacion();
+    }
+
+    cargarEducacion() {
         this.EducacionService.traer().subscribe(data => {this.educacion = data});
+    }
+
+    borrarEducacion(id?: number) {
+        if(id != undefined) {
+            this.EducacionService.borrar(id).subscribe(data => {this.cargarEducacion()}, err => {alert("No se puede borrar esta educacion")});
+        }
     }
 }

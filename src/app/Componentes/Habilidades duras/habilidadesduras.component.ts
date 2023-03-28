@@ -11,6 +11,16 @@ export class HabilidadesDurasComponent implements OnInit {
     habilidadesduras: habilidadesduras[] = [];
     constructor(public habilidadesDurasService: HabilidadesdurasService) { }
     ngOnInit(): void {
+       this.cargarHabilidadesDuras(); 
+    }
+
+    cargarHabilidadesDuras() {
         this.habilidadesDurasService.traer().subscribe(data => {this.habilidadesduras = data});
+    }
+
+    borrarHabilidadDura(id?: number) {
+        if(id != undefined) {
+            this.habilidadesDurasService.borrar(id).subscribe(data => {this.cargarHabilidadesDuras()}, err => {alert("No se puede borrar esta habilidad dura")})
+        }
     }
 }

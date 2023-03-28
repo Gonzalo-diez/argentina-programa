@@ -11,6 +11,10 @@ export class CurriculumComponent implements OnInit {
     curriculum: curriculum[] = [];
     constructor(public CurriculumService: CurriculumService) { }
     ngOnInit(): void {
+        this.cargarCurriculum();
+    }
+
+    cargarCurriculum() {
         this.CurriculumService.traer().subscribe(data => {this.curriculum = data});
     }
 }

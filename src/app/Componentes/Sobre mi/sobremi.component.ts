@@ -8,12 +8,15 @@ import { SobremiService } from 'src/app/Service/sobremi.service';
     styleUrls: ['./sobremi.component.css']
 })
 export class SobreMiComponent implements OnInit {
-    sobremi: sobremi = {
-        sobreTexto: '',
-        sobreTitulo: ''
-    }
+    sobremi: sobremi[] = [];
+
     constructor(public SobremiService: SobremiService) { }
+
     ngOnInit(): void {
-        this.SobremiService.traer(1).subscribe(data => {this.sobremi = data});
+        this.cargarSobreMi();
+    }
+
+    cargarSobreMi() {
+        this.SobremiService.traer().subscribe(data => {this.sobremi = data});
     }
 }

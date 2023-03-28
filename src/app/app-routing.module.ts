@@ -10,7 +10,6 @@ import { ContactoComponent } from './Componentes/Contacto/contacto.component';
 import { CurriculumComponent } from './Componentes/Curriculum/curriculum.component';
 import { FooterComponent } from './Componentes/Footer/footer.component';
 import { LoginComponent } from './Componentes/Login/login.component';
-import { transition } from '@angular/animations';
 
 const routes: Routes = [
   {path: '', children: [

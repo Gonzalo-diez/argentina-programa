@@ -485,7 +485,7 @@ img {
 
 @media screen and (min-width: 576px) {
   .nav {
-    height: calc(var(--header-height) + 1rem);
+    height: calc(var(--header-height) + 1.5rem);
   }
 }
 
@@ -508,6 +508,12 @@ img {
   #education > div > div > a > img {
     width: 90%;
   }
+  .soft__data {
+    margin-left: 15px;
+  }
+  .hard__data {
+    margin-left: 15px;
+  }
   .contact__input {
     width: 90%;
   }
@@ -516,6 +522,9 @@ img {
   }
   .contact__button {
     margin-left: 5px;
+  }
+  .form-login {
+    margin-top: 50%;
   }
   .form-login input[type = "email"] {
     font-size: 12px;
@@ -530,6 +539,30 @@ img {
   }
   .footer__social {
     margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .about__container .about__subtitle {
+    margin-left: 10px;
+  }
+  .about__container .about__text {
+    margin-left: 10px;
+  }
+  .soft__data {
+    margin-left: 40px;
+  }
+  .hard__data {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .soft__data {
+    margin-left: 80px;
+  }
+  .hard__data {
+    margin-left: 80px;
   }
 }
 
@@ -569,11 +602,23 @@ img {
   .about__container {
     padding-top: 2rem;
   }
+  .about__container .about__subtitle {
+    margin-left: 100px;
+  }
+  .about__container .about__text {
+    margin-left: 100px;
+  }
   .education__container {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
     align-items: center;
     text-align: initial;
+  }
+  .soft__data  {
+    margin-left: -20px;
+  }
+  .hard__data {
+    margin-left: -20px;
   }
   .work__container {
     grid-template-columns: repeat(3, 1fr);
@@ -584,6 +629,9 @@ img {
   }
   .hard__container {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .form-login {
+    margin-top: 20%;
   }
   .footer {
     width: 100%;
@@ -600,5 +648,17 @@ img {
   }
   .home__img {
     width: 450px;
+  }
+  .about__container .about__subtitle {
+    margin-left: 10px;
+  }
+  .about__container .about__text {
+    margin-left: 10px;
+  }
+  .soft__data {
+    margin-left: 20px;
+  }
+  .hard__data {
+    margin-left: 20px;
   }
 }

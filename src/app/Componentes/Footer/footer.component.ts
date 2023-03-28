@@ -11,6 +11,10 @@ export class FooterComponent implements OnInit {
     footer: footer[] = [];
     constructor(public footerService: FooterService) { }
     ngOnInit(): void {
+        this.cargarFooter();
+    }
+
+    cargarFooter() {
         this.footerService.traer().subscribe(data => {this.footer = data});
     }
 }

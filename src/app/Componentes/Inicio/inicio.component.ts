@@ -8,15 +8,15 @@ import { InicioService } from 'src/app/Service/inicio.service';
     styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
-    inicio: inicio = {
-        inicioNombre: '',
-        inicioLinkUrl: '',
-        inicioGitUrl: '',
-        inicioImg: '',
-        inicioTexto: ''
-    }
+    inicio: inicio[] = [];
+    
     constructor(public inicioService: InicioService) { }
+
     ngOnInit(): void {
-        this.inicioService.traer(1).subscribe(data => {this.inicio = data})
+        this.cargarInicio();
+    }
+
+    cargarInicio() {
+        this.inicioService.traer().subscribe(data => {this.inicio = data});
     }
 }
