@@ -1,0 +1,27 @@
+<div class="container-fluid d-flex justify-content-center align-items-center vh-100">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="text-center">Editar Footer</h3>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="actualizarFooter()">
+          <div class="form-group">
+            <label for="footerNombre">Nombre del usuario</label>
+            <input type="text" class="form-control" id="footerNombre" [(ngModel)]="pruebaFooter.footerNombre" name="footerNombre" required>
+          </div>
+          <div class="form-group">
+            <label for="footerLinkUrl">Link a linkedin</label>
+            <input type="text" class="form-control" id="footerLinkUrl" [(ngModel)]="pruebaFooter.footerLinkUrl" name="footerLinkUrl" required>
+          </div>
+          <div class="form-group">
+            <label for="footerInstagramUrl">Link a instagram</label>
+            <input type="text" class="form-control" id="footerInstagramUrl" [(ngModel)]="pruebaFooter.footerInstagramUrl" name="footerInstagramUrl" required>
+          </div>
+          <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="button" class="btn btn-danger">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>

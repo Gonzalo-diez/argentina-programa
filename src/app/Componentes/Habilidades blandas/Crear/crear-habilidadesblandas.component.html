@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-center align-items-center h-100">
+    <form class="p-4 rounded bg-light" (ngSubmit)="crearHabilidadesBlandas()">
+      <div class="form-group">
+        <label for="habilidadBlandaNombre">Habilidad Blanda:</label>
+        <input type="text" class="form-control" id="habilidadBlandaNombre" [(ngModel)]="habilidadBlandaNombre" name="habilidadBlandaNombre" required>
+      </div>
+      <div class="form-group">
+        <label for="porcentajeHB">Porcentaje:</label>
+        <input type="number" class="form-control" id="porcentajeHB" [(ngModel)]="porcentajeHB" name="porcentajeHB" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</div>
+  

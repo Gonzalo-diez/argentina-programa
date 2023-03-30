@@ -1,0 +1,24 @@
+<div class="container-fluid d-flex justify-content-center align-items-center vh-100">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="text-center">Editar Curriculum</h3>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="actualizarCurriculum()">
+          <div class="form-group">
+            <label for="curriculumDescarga">Archivo de Descarga</label>
+            <input type="text" class="form-control" id="curriculumDescarga" [(ngModel)]="pruebaCurriculum.curriculumDescarga" name="curriculumDescarga" required>
+          </div>
+          <div class="form-group">
+            <label for="curriculumImg">Imagen</label>
+            <input type="text" class="form-control" id="curriculumImg" [(ngModel)]="pruebaCurriculum.curriculumImg" name="curriculumImg" required>
+          </div>
+          <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="button" class="btn btn-danger">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>
+  

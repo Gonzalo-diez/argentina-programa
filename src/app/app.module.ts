@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { MenuComponent } from './Componentes/Menu/menu.component';
 import { InicioComponent } from './Componentes/Inicio/inicio.component';
@@ -13,7 +15,7 @@ import { HabilidadesDurasComponent } from './Componentes/Habilidades duras/habil
 import { ContactoComponent } from './Componentes/Contacto/contacto.component';
 import { CurriculumComponent } from './Componentes/Curriculum/curriculum.component';
 import { FooterComponent } from './Componentes/Footer/footer.component';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule } from '@angular/common/http';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
@@ -35,9 +37,11 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({}),
+    FormsModule // Add the FormsModule here
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

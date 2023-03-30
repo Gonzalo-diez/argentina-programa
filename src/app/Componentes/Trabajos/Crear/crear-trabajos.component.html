@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <h2 class="mb-4">Crear Nuevo trabajo</h2>
+    <form (ngSubmit)="crearTrabajos()" novalidate #f="ngForm">
+      <div class="form-group">
+        <label>Título de trabajo</label>
+        <input type="text" class="form-control" [(ngModel)]="trabajoTitulo" name="trabajoTitulo" required>
+      </div>
+      <div class="form-group">
+        <label>Imagen URL</label>
+        <input type="text" class="form-control" [(ngModel)]="trabajoImg" name="trabajoImg" required>
+      </div>
+      <div class="form-group">
+        <label>URL del trabajo</label>
+        <input type="text" class="form-control" [(ngModel)]="trabajoUrl" name="trabajoUrl" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Crear trabajo</button>
+    </form>
+  </div>

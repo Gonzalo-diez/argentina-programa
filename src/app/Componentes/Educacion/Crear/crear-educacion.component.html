@@ -1,0 +1,19 @@
+<div class="container mt-5">
+    <h2 class="mb-4">Crear Nueva Educación</h2>
+    <form (ngSubmit)="crearEducacion()" novalidate #f="ngForm">
+      <div class="form-group">
+        <label>Título</label>
+        <input type="text" class="form-control" [(ngModel)]="educacionTitulo" name="educacionTitulo" required>
+      </div>
+      <div class="form-group">
+        <label>Imagen URL</label>
+        <input type="text" class="form-control" [(ngModel)]="educacionImg" name="educacionImg" required>
+      </div>
+      <div class="form-group">
+        <label>URL de la educación</label>
+        <input type="text" class="form-control" [(ngModel)]="educacionUrl" name="educacionUrl" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Crear educacion</button>
+    </form>
+  </div>
+  

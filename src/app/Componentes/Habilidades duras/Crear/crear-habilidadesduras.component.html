@@ -1,0 +1,24 @@
+<div class="container d-flex justify-content-center mt-5">
+    <div class="card w-50">
+      <div class="card-header">
+        <h3 class="text-center">Crear habilidad dura</h3>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="crearHabilidadesDuras()">
+          <div class="form-group mb-3">
+            <label for="habilidadDuraNombre" class="form-label">Nombre de la habilidad dura:</label>
+            <input type="text" class="form-control" id="habilidadDuraNombre" name="habilidadDuraNombre" [(ngModel)]="habilidadDuraNombre" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="porcentajeHD" class="form-label">Porcentaje:</label>
+            <input type="number" class="form-control" id="porcentajeHD" name="porcentajeHD" [(ngModel)]="porcentajeHD" required>
+          </div>
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary">Crear</button>
+            <button type="button" class="btn btn-danger">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

@@ -1,21 +1,22 @@
 <section class="d-flex justify-content-center">
     <div class="container">
-        <h1 class="mb-4">Editar Trabajo</h1>
-        <form (ngSubmit)="actualizarTrabajos()">
+        <h1 class="mb-4">Editar Educación</h1>
+        <form (ngSubmit)="actualizarEducacion()">
             <div class="mb-3">
                 <label for="titulo" class="form-label">Título:</label>
-                <input type="text" class="form-control" id="titulo" [(ngModel)]="pruebaTrabajos.trabajoTitulo" name="titulo">
+                <input type="text" class="form-control" id="titulo" [(ngModel)]="pruebaEducacion.educacionTitulo" name="titulo">
             </div>
             <div class="mb-3">
                 <label for="imagen" class="form-label">Imagen:</label>
-                <input type="text" class="form-control" id="imagen" [(ngModel)]="pruebaTrabajos.trabajoImg" name="imagen">
+                <input type="text" class="form-control" id="imagen" [(ngModel)]="pruebaEducacion.educacionImg" name="imagen">
             </div>
             <div class="mb-3">
                 <label for="url" class="form-label">URL:</label>
-                <input type="text" class="form-control" id="url" [(ngModel)]="pruebaTrabajos.trabajoUrl" name="url">
+                <input type="text" class="form-control" id="url" [(ngModel)]="pruebaEducacion.educacionUrl" name="url">
             </div>
             <button type="submit" class="btn btn-primary me-2">Guardar cambios</button>
             <button type="button" class="btn btn-secondary">Volver</button>
         </form>
     </div>
 </section>
+  
