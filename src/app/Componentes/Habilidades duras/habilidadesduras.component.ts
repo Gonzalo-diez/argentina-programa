@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { habilidadesduras } from 'src/app/Model/habilidadesduras.model';
 import { HabilidadesdurasService } from 'src/app/Service/habilidadesduras.service';
+import { TokenService } from 'src/app/Service/token.service';
 
 @Component({
     selector: 'app-habilidades-duras',
@@ -9,9 +10,19 @@ import { HabilidadesdurasService } from 'src/app/Service/habilidadesduras.servic
 })
 export class HabilidadesDurasComponent implements OnInit {
     habilidadesduras: habilidadesduras[] = [];
-    constructor(public habilidadesDurasService: HabilidadesdurasService) { }
+
+    constructor(private habilidadesDurasService: HabilidadesdurasService, private tokenService: TokenService) { }
+
+    isLog = false;
+
     ngOnInit(): void {
-       this.cargarHabilidadesDuras(); 
+        this.cargarHabilidadesDuras(); 
+        if(this.tokenService.getToken()) {
+            this.isLog = true;
+        }
+        else {
+            this.isLog = false;
+        }
     }
 
     cargarHabilidadesDuras() {

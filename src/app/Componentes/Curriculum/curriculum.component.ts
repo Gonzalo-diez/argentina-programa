@@ -9,7 +9,7 @@ import { CurriculumService } from 'src/app/Service/curriculum.service';
 })
 export class CurriculumComponent implements OnInit {
     curriculum: curriculum[] = [];
-    constructor(public CurriculumService: CurriculumService) { }
+    constructor(private CurriculumService: CurriculumService) { }
     ngOnInit(): void {
         this.cargarCurriculum();
     }

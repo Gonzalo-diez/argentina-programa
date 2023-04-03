@@ -19,15 +19,15 @@ export class InicioService {
     return this.http.get<inicio>(`${this.URL}/traer/${id}`);
   }
 
-  public guardar(inicio: inicio): Observable<any> {
+  /*public guardar(inicio: inicio): Observable<any> {
     return this.http.post<any>(`${this.URL}/crear`, inicio);
-  }
+  }*/
 
   public actualizar(id: number, inicio: inicio): Observable<any> {
     return this.http.put<any>(`${this.URL}/editar/${id}`, inicio);
   }
 
-  public borrar(id: number): Observable<any> {
+  /*public borrar(id: number): Observable<any> {
     return this.http.delete<any>(`${this.URL}/borrar/${id}`);
-  }
+  }*/
 }

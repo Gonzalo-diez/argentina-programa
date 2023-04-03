@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trabajos } from 'src/app/Model/trabajos.model';
+import { TokenService } from 'src/app/Service/token.service';
 import { TrabajosService } from 'src/app/Service/trabajos.service';
 
 @Component({
@@ -10,10 +11,18 @@ import { TrabajosService } from 'src/app/Service/trabajos.service';
 export class TrabajosComponent implements OnInit {
     trabajos: trabajos[] = [];
 
-    constructor(public trabajosService: TrabajosService) { }
+    constructor(private trabajosService: TrabajosService, private tokenService: TokenService) { }
+
+    isLog = false;
 
     ngOnInit(): void {
-       this.cargarTrabajos(); 
+        this.cargarTrabajos(); 
+        if(this.tokenService.getToken()) {
+            this.isLog = true;
+        }
+        else {
+            this.isLog = false;
+        }
     }
 
     cargarTrabajos() {

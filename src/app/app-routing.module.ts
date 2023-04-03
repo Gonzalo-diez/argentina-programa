@@ -1,29 +1,39 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InicioComponent } from './Componentes/Inicio/inicio.component';
-import { SobreMiComponent } from './Componentes/Sobre mi/sobremi.component';
-import { EducacionComponent } from './Componentes/Educacion/educacion.component';
-import { HabilidadesBlandasComponent } from './Componentes/Habilidades blandas/habilidadesblandas.component';
-import { HabilidadesDurasComponent } from './Componentes/Habilidades duras/habilidadesduras.component';
-import { TrabajosComponent } from './Componentes/Trabajos/trabajos.component';
-import { ContactoComponent } from './Componentes/Contacto/contacto.component';
-import { CurriculumComponent } from './Componentes/Curriculum/curriculum.component';
-import { FooterComponent } from './Componentes/Footer/footer.component';
+import { PortfolioComponent } from './Componentes/Portfolio/portfolio.component';
 import { LoginComponent } from './Componentes/Login/login.component';
+import { editarCurriculumComponent } from './Componentes/Curriculum/Editar/editar-curriculum.component';
+import { editarEducacionComponent } from './Componentes/Educacion/Editar/editar-educacion.component';
+import { editarFooterComponent } from './Componentes/Footer/Editar/editar-footer.component';
+import { editarHabilidadesBlandasComponent } from './Componentes/Habilidades blandas/Editar/editar-habilidadesblandas.component';
+import { editarHabilidadesDurasComponent } from './Componentes/Habilidades duras/Editar/editar-habilidadesduras.component';
+import { editarInicioComponent } from './Componentes/Inicio/Editar/editar-inicio.component';
+import { editarSobremiComponent } from './Componentes/Sobre mi/Editar/editar-sobremi.component';
+import { editarTrabajosComponent } from './Componentes/Trabajos/Editar/editar-trabajos.component'; 
+import { editarExperienciaComponent } from './Componentes/Experiencia/Editar/editar-experiencia.component';
+import { crearEducacionComponent } from './Componentes/Educacion/Crear/crear-educacion.component';
+import { crearHabilidadesBlandasComponent } from './Componentes/Habilidades blandas/Crear/crear-habilidadesblandas.component';
+import { crearHabilidadesDurasComponent } from './Componentes/Habilidades duras/Crear/crear-habilidadesduras.component';
+import { crearTrabajosComponent } from './Componentes/Trabajos/Crear/crear-trabajos.component';
+import { crearExperienciaComponent } from './Componentes/Experiencia/Crear/crear-experiencia.component';
 
 const routes: Routes = [
-  {path: '', children: [
-    {path: '', component: InicioComponent, outlet: 'app-inicio'},
-    {path: '', component: SobreMiComponent, outlet: 'app-sobremi'},
-    {path: '', component: EducacionComponent, outlet: 'app-educacion'},
-    {path: '', component: HabilidadesBlandasComponent, outlet: 'app-habilidades-blandas'},
-    {path: '', component: HabilidadesDurasComponent, outlet: 'app-habilidades-duras'},
-    {path: '', component: TrabajosComponent, outlet: 'app-trabajos'},
-    {path: '', component: ContactoComponent, outlet: 'app-contacto'},
-    {path: '', component: CurriculumComponent, outlet: 'app-curriculum'},
-    {path: '', component: FooterComponent, outlet: 'app-footer'},
-  ]},
-  {path: 'Login', component: LoginComponent}
+  {path: '', component: PortfolioComponent},
+  {path: 'Login', component: LoginComponent},
+  {path: 'Editar-curriculum/:id', component: editarCurriculumComponent},
+  {path: 'Editar-educacion/:id', component: editarEducacionComponent},
+  {path: 'Editar-footer/:id', component: editarFooterComponent},
+  {path: 'Editar-habilidades-blandas/:id', component: editarHabilidadesBlandasComponent},
+  {path: 'Editar-habilidades-duras/:id', component: editarHabilidadesDurasComponent},
+  {path: 'Editar-inicio/:id', component: editarInicioComponent},
+  {path: 'Editar-sobremi/:id', component: editarSobremiComponent},
+  {path: 'Editar-trabajos/:id', component: editarTrabajosComponent},
+  {path: 'Editar-experiencia/:id', component: editarExperienciaComponent},
+  {path: 'Crear-educacion', component: crearEducacionComponent},
+  {path: 'Crear-habilidad-blanda', component: crearHabilidadesBlandasComponent},
+  {path: 'Crear-habilidad-dura', component: crearHabilidadesDurasComponent},
+  {path: 'Crear-trabajos', component: crearTrabajosComponent},
+  {path: 'Crear-experiencia', component: crearExperienciaComponent}
 ];
 
 @NgModule({

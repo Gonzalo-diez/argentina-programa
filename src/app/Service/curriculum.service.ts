@@ -19,15 +19,15 @@ export class CurriculumService {
     return this.http.get<curriculum>(`${this.URL}/traer/${id}`);
   }
 
-  public guardar(curriculum: curriculum): Observable<any> {
+  /*public guardar(curriculum: curriculum): Observable<any> {
     return this.http.post<any>(`${this.URL}/crear`, curriculum);
-  }
+  }*/
 
   public actualizar(id: number, curriculum: curriculum): Observable<any> {
     return this.http.put<any>(`${this.URL}/editar/${id}`, curriculum);
   }
 
-  public borrar(id: number): Observable<any> {
+  /*public borrar(id: number): Observable<any> {
     return this.http.delete<any>(`${this.URL}/borrar/${id}`);
-  }
+  }*/
 }

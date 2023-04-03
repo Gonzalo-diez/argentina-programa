@@ -1,0 +1,11 @@
+<!-- Sección de experiencia -->
+<section class="experience section" id="experience">
+    <h2 class="section-title">Experiencia</h2>
+
+    <p class="experience__text">Mis experiencias laborales</p>
+    <div class="experience__container bd-grid">
+        <div *ngFor="let item of experiencia">
+          <h3 class="experience__data">{{item.experienciaNombre}} - {{item.experienciaDesde}} - {{item.experienciaHasta}}</h3>
+        </div>
+    </div>
+</section>

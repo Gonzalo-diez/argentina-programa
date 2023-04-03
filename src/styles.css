@@ -339,6 +339,22 @@ img {
   width: 100%;
 }
 
+/*=== Experiencia ===*/
+.experience__container {
+  margin-top: 2rem;
+  row-gap: 2rem;
+}
+
+.experience__text {
+  font-size: 1.5rem;
+  row-gap: 2rem;
+  text-align: center;
+}
+
+.experience__data {
+  text-align: center;
+}
+
 /*=== Trabajos ===*/
 .work__container {
   row-gap: 2rem;
@@ -403,7 +419,7 @@ img {
   padding-bottom: 30px;
 }
 
-.form-login input[type = "email"] {
+.form-login input[type = "nombreUsuario"] {
   border-radius: 20px;
   width: 20%;
   text-align: center;
@@ -508,6 +524,9 @@ img {
   #education > div > div > a > img {
     width: 90%;
   }
+  .experience__data {
+    font-size: 1rem;
+  }
   .soft__data {
     margin-left: 15px;
   }
@@ -526,7 +545,7 @@ img {
   .form-login {
     margin-top: 50%;
   }
-  .form-login input[type = "email"] {
+  .form-login input[type = "nombreUsuario"] {
     font-size: 12px;
     width: 190px;
   }
@@ -631,7 +650,7 @@ img {
     grid-template-columns: repeat(3, 1fr);
   }
   .form-login {
-    margin-top: 20%;
+    margin-top: 10%;
   }
   .footer {
     width: 100%;

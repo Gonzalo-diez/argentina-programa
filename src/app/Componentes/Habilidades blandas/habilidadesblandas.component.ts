@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { habilidadesblandas } from 'src/app/Model/habilidadesblandas.model';
 import { HabilidadesblandasService } from 'src/app/Service/habilidadesblandas.service';
+import { TokenService } from 'src/app/Service/token.service';
 
 @Component({
     selector: 'app-habilidades-blandas',
@@ -10,9 +11,19 @@ import { HabilidadesblandasService } from 'src/app/Service/habilidadesblandas.se
 
 export class HabilidadesBlandasComponent implements OnInit {
     habilidadesblandas: habilidadesblandas[] = [];
-    constructor(public habilidadesBlandasService: HabilidadesblandasService) { }
+
+    constructor(private habilidadesBlandasService: HabilidadesblandasService, private tokenService: TokenService) { }
+
+    isLog = false;
+
     ngOnInit(): void {
         this.cargarHabilidadesBlandas();
+        if(this.tokenService.getToken()) {
+            this.isLog = true;
+        }
+        else {
+            this.isLog = false;
+        }
     }
 
     cargarHabilidadesBlandas() {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { footer } from 'src/app/Model/footer.model';
 import { FooterService } from 'src/app/Service/footer.service';
+import { TokenService } from 'src/app/Service/token.service';
 
 @Component({
     selector: 'app-footer',
@@ -9,9 +10,18 @@ import { FooterService } from 'src/app/Service/footer.service';
 })
 export class FooterComponent implements OnInit {
     footer: footer[] = [];
-    constructor(public footerService: FooterService) { }
+    constructor(private footerService: FooterService, private tokenService: TokenService) { }
+
+    isLog = false;
+
     ngOnInit(): void {
         this.cargarFooter();
+        if(this.tokenService.getToken()) {
+            this.isLog = true;
+        }
+        else {
+            this.isLog = false;
+        }
     }
 
     cargarFooter() {
